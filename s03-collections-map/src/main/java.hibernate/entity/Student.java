@@ -1,6 +1,7 @@
 package entity;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.*;
@@ -8,6 +9,7 @@ import java.util.*;
 @Entity
 @Table (name = "student")
 @Data
+@NoArgsConstructor
 public class Student {
 
     @Id
@@ -40,7 +42,18 @@ public class Student {
     @Column (name = "image_name_m")
     private Map<String, String> imagesMap = new HashMap<> ();
 
+    @ElementCollection
+    @CollectionTable (name = "images_sorted")
+    @Column (name = "file_name_sorted")
+    @org.hibernate.annotations.OrderBy (clause = "file_name_sorted asc")
+    private Set<String> imagesSorted = new LinkedHashSet<> ();
 
+
+    @ElementCollection
+    @CollectionTable (name = "images_sorted_map")
+    @MapKeyColumn (name = "file_name_sorted_map")
+    @OrderBy
+    private SortedMap<String,String> sortedImagesMap = new TreeMap<> ();
 
     public Student (String firstName, String lastName, String email) {
         this.firstName = firstName;

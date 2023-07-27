@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.SortedMap;
 
 @Slf4j
 public class CreateStudentImagesMapDemo {
@@ -38,6 +39,18 @@ public class CreateStudentImagesMapDemo {
             Map<String, String> mapImages = student1.getImagesMap ();
             mapImages.put ("photo1.jpg", "Photo 1");
             mapImages.put ("photo2.jpg", "Description 2");
+
+            Set<String> sortedImages = student1.getImagesSorted ();
+            sortedImages.add ("photo4.jpg");
+            sortedImages.add ("photo1.jpg");
+            sortedImages.add ("photo3.jpg");
+            sortedImages.add ("photo2.jpg");
+
+            SortedMap<String, String> sortedMapImages = student1.getSortedImagesMap ();
+            sortedMapImages.put ("photo4.jpg", "Photo 4");
+            sortedMapImages.put ("photo1.jpg", "Photo 1");
+            sortedMapImages.put ("photo3.jpg", "Photo 3");
+            sortedMapImages.put ("photo2.jpg", "Photo 2");
 
             Student student2 = new Student ("Mary", "Public", "Mary@com");
             Student student3 = new Student ("Bonita", "Applebum", "Bonita@com");
