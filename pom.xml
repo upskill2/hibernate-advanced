@@ -10,6 +10,7 @@
   <packaging>pom</packaging>
   <modules>
       <module>s02-collections-set</module>
+      <module>s03-collections-map</module>
   </modules>
 
   <properties>
