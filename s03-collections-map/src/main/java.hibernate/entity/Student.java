@@ -2,6 +2,7 @@ package entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.SortComparator;
 
 import javax.persistence.*;
 import java.util.*;
@@ -52,7 +53,8 @@ public class Student {
     @ElementCollection
     @CollectionTable (name = "images_sorted_map")
     @MapKeyColumn (name = "file_name_sorted_map")
-    @OrderBy
+  //  @OrderBy
+    @SortComparator (ReverseStringComparator.class)
     private SortedMap<String,String> sortedImagesMap = new TreeMap<> ();
 
     public Student (String firstName, String lastName, String email) {
