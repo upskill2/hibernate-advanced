@@ -34,11 +34,9 @@ public class CreateStudentImagesSetDemo {
             listImages1.add ("photoC.jpg");
             listImages1.add ("photoC.jpg");
 
-
             Student student2 = new Student ("Mary", "Public", "Mary@com");
             Student student3 = new Student ("Bonita", "Applebum", "Bonita@com");
             Student student4 = new Student ("James", "Bond", "James@com");
-
 
             session.beginTransaction ();
             log.info ("Saving the students and images");

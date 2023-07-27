@@ -1,11 +1,12 @@
-import entity.Student;
 
+import entity.Student;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 @Slf4j
@@ -34,15 +35,17 @@ public class CreateStudentImagesMapDemo {
             listImages1.add ("photoC.jpg");
             listImages1.add ("photoC.jpg");
 
-
+            Map<String, String> mapImages = student1.getImagesMap ();
+            mapImages.put ("photo1.jpg", "Photo 1");
+            mapImages.put ("photo2.jpg", "Description 2");
 
             Student student2 = new Student ("Mary", "Public", "Mary@com");
             Student student3 = new Student ("Bonita", "Applebum", "Bonita@com");
             Student student4 = new Student ("James", "Bond", "James@com");
 
-
             session.beginTransaction ();
             log.info ("Saving the students and images");
+
             session.persist (student1);
             session.persist (student2);
             session.persist (student3);
@@ -52,8 +55,7 @@ public class CreateStudentImagesMapDemo {
             log.info ("Done!");
 
         } catch (Exception e) {
-            log.error ("SQLException: " + e.getMessage());
-
+            log.error ("SQLException: " + e.getMessage ());
         } finally {
             session.close ();
             sessionFactory.close ();

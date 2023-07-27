@@ -23,7 +23,6 @@ public class Student {
     @Column (name = "email")
     private String email;
 
-
     @ElementCollection
     @CollectionTable (name = "image", joinColumns = @JoinColumn (name = "student_id"))
     @Column (name = "file_name")
@@ -35,12 +34,13 @@ public class Student {
     @OrderColumn
     private List<String> imagesList = new ArrayList<> ();
 
-
     @ElementCollection
     @CollectionTable (name = "images_map", joinColumns = @JoinColumn (name = "student_id"))
-    @Column (name = "image_name")
-    @MapKeyColumn (name = "file_name")
-    Map<String, String> imagesMap = new HashMap<> ();
+    @MapKeyColumn (name = "file_name_m")
+    @Column (name = "image_name_m")
+    private Map<String, String> imagesMap = new HashMap<> ();
+
+
 
     public Student (String firstName, String lastName, String email) {
         this.firstName = firstName;
