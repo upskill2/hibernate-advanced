@@ -1,7 +1,7 @@
 import entity.Student;
+
+
 import lombok.extern.slf4j.Slf4j;
-
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -39,6 +39,7 @@ public class CreateStudentImagesSetDemo {
             Student student2 = new Student ("Mary", "Public", "Mary@com");
             Student student3 = new Student ("Bonita", "Applebum", "Bonita@com");
             Student student4 = new Student ("James", "Bond", "James@com");
+
 
             session.beginTransaction ();
             log.info ("Saving the students and images");
