@@ -1,6 +1,5 @@
 import entity.Address;
 import entity.Student;
-
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 
 @Slf4j
-public class CreateStudentEmbeddableDemo {
+public class CreateStudentEmbeddableAttributesOverriswDemo {
     public static void main (String[] args)  {
         SessionFactory sessionFactory =  new Configuration ()
                 .configure ("hibernate.cfg.xml")
@@ -19,7 +18,10 @@ public class CreateStudentEmbeddableDemo {
         try (sessionFactory; Session session = sessionFactory.getCurrentSession ()) {
             Student student1 = new Student ("John", "Doe", "John@gmail.com");
             Address address1 = new Address ("123 Main St", "New York", 12345);
-            student1.setAddress (address1);
+            Address address2 = new Address ("qwe", "etr", 96871);
+            student1.setBillingAddress (address1);
+            student1.setAddress (address2);
+
 
             Student student2 = new Student ("Mary", "Public", "Mary@com");
             Student student3 = new Student ("Bonita", "Applebum", "Bonita@com");
