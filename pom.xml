@@ -15,6 +15,7 @@
         <module>s05-enum</module>
         <module>s06-inheritance-single-table</module>
         <module>s07-inheritance-table-per-class</module>
+        <module>s08-inheritance-joined-table</module>
     </modules>
 
     <properties>
