@@ -13,6 +13,7 @@
         <module>s03-collections-map</module>
         <module>s04-embeddable</module>
         <module>s05-enum</module>
+        <module>s06-inheritance-single-table</module>
     </modules>
 
     <properties>
