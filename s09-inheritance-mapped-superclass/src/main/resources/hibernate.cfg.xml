@@ -12,7 +12,7 @@
         <property name="connection.username">hbstudent</property>
         <property name="connection.password">hbstudent</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
-K
+
         <!-- JDBC connection pool settings ... using built-in test pool -->
         <property name="connection.pool_size">20</property>
 
