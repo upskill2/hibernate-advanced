@@ -22,7 +22,7 @@ public class Student {
     @Column (name = "email")
     private String email;
 
-   @Enumerated (EnumType.STRING)
+    @Enumerated (EnumType.STRING)
     @Column (name = "status")
     private Status status;
 
