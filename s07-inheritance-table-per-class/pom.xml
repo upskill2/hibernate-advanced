@@ -6,8 +6,8 @@
         <artifactId>hibernate-advanced</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>s06-inheritance-single-table</artifactId>
-    <name>s06-inheritance-single-table</name>
+    <artifactId>s07-inheritance-table-per-class</artifactId>
+    <name>s07-inheritance-table-per-class</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>

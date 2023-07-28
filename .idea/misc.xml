@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/s02-collections-set/pom.xml" />
         <option value="$PROJECT_DIR$/s04-embeddable/pom.xml" />
         <option value="$PROJECT_DIR$/s05-enum/pom.xml" />
+        <option value="$PROJECT_DIR$/s07-inheritance-table-per-class/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
